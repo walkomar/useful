@@ -10,6 +10,7 @@ watch -d free -h    #-d podswietla, co zmienilo sie od ostatniego odswiezenia
 
 rsync -avh  --progress /project/ /mnt/backup/  # synchronizuje katalogi. Jak jest duzo plikow a malo sie zmienilo to idzie szybko. Nawet jak czesc pliku sie zmienila, to skopiuje czesc pliku. A jakby cos sie przerwalo, to potem leci dalej, nie od poczatku. Mozna nawet SSH uzywac do tego.!!
 # rsync powyzej SRC roznica - Bez slasha: kopiujesz cały folder,   ==> Ze slashem: kopiujesz zawartość
+rsync -avhn    # dry-run opcja -n
 
 pushd / popd    # budujesz stock czesto uzywanych folderow
 xset dpms force off        #turn off only monitor immediately
