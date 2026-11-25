@@ -1,1 +1,5 @@
-
+/etc/ssh/sshd_config    # glowne ustawienia. W konfiguracjach korzystających z Include ustawienia mogą znajdować się również w:  /etc/ssh/sshd_config.d/*.conf
+sudo journalctl -u sshd --since "30 minutes ago" --no-pager    # sprawdzenie ktos sie logowal w ciagu ostatnich 30 minut
+grep -Ev '^[[:space:]]*(#|$)' /etc/ssh/sshd_config    # pokazuje tylko to bez hasha ustawienia
+sshd -T  # sprawdza skladnie calej konfiguracji
+sshd -T  -C # sprawdza skladnie calej konfiguracji dla konkretnego uzytkownika i polaczenia
